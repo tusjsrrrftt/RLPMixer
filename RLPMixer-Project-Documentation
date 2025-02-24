@@ -1,0 +1,94 @@
+# RLPMixer Project Documentation
+
+## Directory Structure
+
+```
+RLPMixer/
+├── data/                         # Datasets or sample images
+│   ├── raw/                      # Unprocessed data
+│   ├── processed/                # Preprocessed data
+│   └── README.md
+├── models/                       # Saved models and checkpoints
+│   └── README.md
+├── src/                          # Source code
+│   ├── __init__.py               # Makes src a package
+│   ├── train.py                  # Model training logic
+│   ├── generate.py               # Pixel generation and inference
+│   ├── utils.py                  # Helper functions (data loading, preprocessing)
+│   ├── reinforcement/            # RL algorithms (actions, rewards, agents)
+│   │   ├── __init__.py
+│   │   ├── agent.py
+│   │   └── reward.py
+│   ├── models/                   # Model definitions (CNNs, GANs, etc.)
+│   │   ├── __init__.py
+│   │   └── rlpmixer_model.py
+├── config/                       # Config files for hyperparameters and setup
+│   ├── config.yaml
+│   └── README.md
+├── notebooks/                    # Jupyter notebooks for experiments
+│   └── exploration.ipynb
+├── tests/                        # Unit and integration tests
+│   ├── test_train.py
+│   ├── test_generate.py
+│   └── README.md
+├── logs/                         # TensorBoard logs and training history
+├── requirements.txt              # Python dependencies
+├── setup.py                      # Installation script
+├── README.md                     # Project overview
+├── LICENSE                       # License file
+└── .gitignore                    # Files to ignore in version control
+```
+
+## File Documentation
+
+### data/
+- **raw/**: Contains the raw, unprocessed datasets.
+- **processed/**: Stores preprocessed data ready for model consumption.
+- **README.md**: Explains how data is structured and how to add new datasets.
+
+### models/
+- Contains saved models and training checkpoints.
+- **README.md**: Describes model saving formats and how to load them for inference.
+
+### src/
+- **train.py**: Implements the training loop, defining how the model learns.
+- **generate.py**: Contains the pixel generation logic using the trained model.
+- **utils.py**: Helper functions for data processing, logging, etc.
+- **reinforcement/**:
+  - **agent.py**: Defines RL agents and their strategies.
+  - **reward.py**: Handles reward mechanisms for pixel validation.
+- **models/**:
+  - **rlpmixer_model.py**: The core RLPMixer model definition.
+
+### config/
+- **config.yaml**: Stores all hyperparameters, paths, and configurations.
+- **README.md**: Describes how to modify and use configuration files.
+
+### notebooks/
+- **exploration.ipynb**: Jupyter notebook for experiments and visualization.
+
+### tests/
+- **test_train.py**: Unit tests for the training process.
+- **test_generate.py**: Tests for the generation pipeline.
+- **README.md**: Instructions on how to run tests.
+
+### logs/
+- Contains training logs and TensorBoard data for visualization.
+
+### requirements.txt
+- Lists Python dependencies for the project.
+
+### setup.py
+- Script for installing the RLPMixer package.
+
+### README.md
+- Main project overview, setup instructions, and usage examples.
+
+### LICENSE
+- Licensing information.
+
+### .gitignore
+- Specifies files and directories to be excluded from version control.
+
+
+
